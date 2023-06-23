@@ -1,0 +1,15 @@
+<!-- // 1 -->
+<input type="number" (input)="onValueChange($event)">
+<input type="number" (input)="onValueChange($event)">
+<p>C Received data from sendDataToChild receivedData1: {{ receivedData1 }}</p>
+
+<hr>
+
+<!-- // 2 -->
+<p>C Received data from onInputChange receivedData2: {{ receivedData2 }}</p>
+
+<hr>
+
+<!-- // 3  -->
+<input type="number" [(ngModel)]="c" (ngModelChange)="change($event, 'c')" placeholder="Celsius">
+<input type="number" [(ngModel)]="f" (ngModelChange)="change($event, 'f')" placeholder="Fahrenheit">
